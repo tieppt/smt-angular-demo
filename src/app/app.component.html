@@ -526,6 +526,11 @@
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
+<button (click)="shareScreen()" [disabled]="disabled">Share screen</button>
 
+<p *ngIf="error" style="color: red">{{ error }}</p>
+<ng-container *ngIf="(displayMedia$ | async) as screen">
+  <video *ngIf="!error" controls autoplay playsinline muted="true" volume="0" [srcObject]="screen"></video>
+</ng-container>
 
 <router-outlet></router-outlet>
