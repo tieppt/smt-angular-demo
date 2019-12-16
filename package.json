@@ -2,6 +2,7 @@
   "name": "smt",
   "version": "0.0.0",
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -43,5 +44,8 @@
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",
     "typescript": "~3.6.4"
+  },
+  "resolutions": {
+    "serialize-javascript": "^2.1.1"
   }
 }
