@@ -1,0 +1,4 @@
+:host ::ng-deep {
+  @import "~quill/dist/quill.core";
+  @import "~quill/dist/quill.snow";
+}
